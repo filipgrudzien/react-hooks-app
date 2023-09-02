@@ -7,7 +7,6 @@ import {MenuPageComponent} from "./menu-page/MenuPageComponent";
 import {MousePositionComponent} from "./hook-pages/mouse-position/MousePositionComponent";
 import {NotFoundPageComponent} from "./not-found-page/NotFoundPageComponent";
 
-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
 export function App(): React.JSX.Element {
 
   return (

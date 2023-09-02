@@ -1,15 +1,21 @@
 import '../App.css';
+import {MenuOptionComponent} from "./menu-option/MenuOptionComponent";
 
-export enum MenuOption {
-    MOUSE_POSITION = 'MOUSE_POSITION'
+export enum PageName {
+    MOUSE_POSITION = 'Mouse Position'
 }
 
-export function MenuPageComponent(): React.JSX.Element {
-    const menuOptions: MenuOption[] = [
-        MenuOption.MOUSE_POSITION
-    ]
+export interface MenuOption {
+    pageName: PageName;
+    urlPath: string;
+}
 
+export const menuOptions: PageName[] = [
+    PageName.MOUSE_POSITION
+]
+
+export function MenuPageComponent(): React.JSX.Element {
     return <div>
-        Choose demo custom hook to see how it works:
+        {menuOptions.map(option => <MenuOptionComponent pageName={option} urlPath={'/mouse-position'}/>)}
     </div>
 }

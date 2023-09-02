@@ -1,16 +1,14 @@
 import '../../App.css';
+import {useNavigate} from "react-router-dom";
+import {MenuOption} from "../MenuPageComponent";
 
-export function MenuOptionComponent({ name, urlPath }: MenuOptionProps): React.JSX.Element {
+export function MenuOptionComponent({ pageName, urlPath }: MenuOption): React.JSX.Element {
+    const navigate = useNavigate();
     const onOptionClick = () => {
-        // todo lead to new url
+        navigate(urlPath);
     };
 
     return <div onClick={onOptionClick}>
-        {name}
+        {pageName.valueOf()}
     </div>
-}
-
-export interface MenuOptionProps {
-    name: string;
-    urlPath: string;
 }
