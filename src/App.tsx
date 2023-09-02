@@ -1,5 +1,4 @@
 // @ts-ignore
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import React from "react";
@@ -8,7 +7,6 @@ import {MousePositionComponent} from "./hook-pages/mouse-position/MousePositionC
 import {NotFoundPageComponent} from "./not-found-page/NotFoundPageComponent";
 
 export function App(): React.JSX.Element {
-
   return (
     <div className="App">
         <BrowserRouter>

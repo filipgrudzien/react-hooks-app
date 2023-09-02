@@ -1,5 +1,5 @@
 import {useNavigate} from "react-router-dom";
-import "./HookPage.css"
+import "../App.css"
 import {PropsWithChildren} from "react";
 
 export interface HookPageProps {
@@ -14,8 +14,8 @@ export function HookPage(props: PropsWithChildren<HookPageProps>): React.JSX.Ele
     }
 
     return <>
-        <h3>{props.title}</h3>
+        <h3 className="titleMargin">{props.title}</h3>
         {props.children}
-        <button className={'backButton'} onClick={onGoBackClick}>Go back to menu</button>
+        <button type="button" className="btn btn-secondary" onClick={onGoBackClick}>Go back to menu</button>
     </>
 }
