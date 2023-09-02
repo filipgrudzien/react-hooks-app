@@ -1,5 +1,6 @@
 import '../App.css';
 import {MenuOptionComponent} from "./menu-option/MenuOptionComponent";
+import "./MenuPage.css"
 
 export enum PageName {
     MOUSE_POSITION = 'Mouse Position'
@@ -15,7 +16,7 @@ export const menuOptions: PageName[] = [
 ]
 
 export function MenuPageComponent(): React.JSX.Element {
-    return <div>
+    return <div className={'pageHeight'}>
         {menuOptions.map(option => <MenuOptionComponent pageName={option} urlPath={'/mouse-position'}/>)}
     </div>
 }
